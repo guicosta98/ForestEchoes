@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ePrincipal</name>
+    <events>
+        <include>ePersonagem</include>
+        <include>ePrincipal</include>
+        <include>eMainMenu</include>
+        <include>SoundManager</include>
+        <variable constant="0" name="Pause" sid="952674947532333" static="0" type="number">1</variable>
+        <event-block sid="405473118538534">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="207330018366608" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

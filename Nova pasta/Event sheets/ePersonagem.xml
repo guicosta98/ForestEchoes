@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ePersonagem</name>
+    <events>
+        <event-group description="" sid="994596260403768" title="Camera">
+            <sub-events>
+                <event-block sid="635829239200333">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="765056192428376" type="System" />
+                        <condition id="7" inverted="1" name="Is mirrored" sid="865227883951335" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="722994915948431" type="camera">
+                            <param id="0" name="X">lerp(Self.X, Player.X+200, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Player.Y, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="742766712228258">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="885643135769592" type="System" />
+                        <condition id="7" name="Is mirrored" sid="202823161934069" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="106746386472140" type="camera">
+                            <param id="0" name="X">lerp(Self.X, Player.X-200, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Player.Y, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="687856137264085" title="Input Keyboard e Gamepad">
+            <sub-events>
+                <event-group description="" sid="912255639446056" title="ataques">
+                    <sub-events>
+                        <event-block sid="735173819218208">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="927547712208121" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="673909067983022">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="493153042768702" type="Player">
+                                            <param id="0" name="Instance variable">atacando</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="978638561114565">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="774582120934689" type="Player">
+                                                    <param id="0" name="Instance variable">onAir</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="154565400891461" type="Player">
+                                                    <param id="0" name="Instance variable">atacando</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="200559269462829" type="Player">
+                                                    <param id="0" name="Instance variable">estado</param>
+                                                    <param id="1" name="Value">&quot;jumpAtaque&quot;&amp;Player.combo</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="883881726253896">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="448134561555834" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="703525097349221" type="Player">
+                                                    <param id="0" name="Instance variable">atacando</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="915302331333108" type="Player">
+                                                    <param id="0" name="Instance variable">estado</param>
+                                                    <param id="1" name="Value">&quot;soco1&quot;&amp;Player.combo</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="183764584549776" type="Player">
+                                                    <param id="0" name="Instance variable">comboTimer</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="162498742441046">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="333752903593189" type="Player">
+                                                            <param id="0" name="Instance variable">combo</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Value">Player.comboMaximo</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="811203693132359" type="Player">
+                                                            <param id="0" name="Instance variable">combo</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="879804816435151">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="733197529279283" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-11" name="Add to" sid="524098753976709" type="Player">
+                                                            <param id="0" name="Instance variable">combo</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="604673240263535" title="pular">
+                    <sub-events>
+                        <event-block sid="662366313812531">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="225692536214412" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="656170659875920">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="912264889033962" type="Player">
+                                            <param id="0" name="Instance variable">onAir</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="637264486349686" type="Player">
+                                            <param id="0" name="Instance variable">onAir</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="927657931055800" type="Player">
+                                            <param id="0" name="Instance variable">estado</param>
+                                            <param id="1" name="Value">&quot;jump1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="665145481746660" title="caminhar">
+                    <sub-events>
+                        <event-block sid="385099711904621">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="272196587058193" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="126866168839023" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="815032950448328">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="195273418454340" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="626608169158915" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="968276768157525" title="ControladorAnimacao" />
+        <event-block sid="558538553386297">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="154104774229788" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="837084700612681" type="Player">
+                    <param id="0" name="Animation">Player.estado</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="896099769032486">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="846790485619112" type="Player" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="248279365803956" type="Player">
+                            <param id="0" name="Instance variable">onAir</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="904478124235846" type="Player">
+                            <param id="0" name="Instance variable">onAir</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="811951890727241">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="734451302938909" type="Player" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="329946803312465" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="614526099588505" type="Player">
+                            <param id="0" name="Instance variable">estado</param>
+                            <param id="1" name="Value">&quot;run&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="943726831667323">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="240461564690009" type="Player" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="831559947935788" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="997105359886488" type="Player">
+                            <param id="0" name="Instance variable">estado</param>
+                            <param id="1" name="Value">&quot;idle&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="832854562638963">
+                    <conditions>
+                        <condition behavior="Platform" id="6" name="On fall" sid="490596610439488" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="900205892315883" type="Player">
+                            <param id="0" name="Instance variable">estado</param>
+                            <param id="1" name="Value">&quot;jump2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
