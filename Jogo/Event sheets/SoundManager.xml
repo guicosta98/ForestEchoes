@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SoundManager</name>
+    <events>
+        <event-block sid="465687614186449">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="202843881493066" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="801017389005652">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="663137190763877" type="System">
+                            <param id="0" name="Variable">MusicVolume</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="559589153879386" type="Audio">
+                            <param id="0" name="Tag">&quot;Music&quot;</param>
+                            <param id="1" name="dB">(MusicVolume * 10) - 20</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="653671153748784" type="Audio">
+                            <param id="0" name="Tag">&quot;Music&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="426932962586371">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="563882529417185" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="769861988968932" type="Audio">
+                            <param id="0" name="Tag">&quot;Music&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="773969004719204">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="667473789011311" type="System">
+                            <param id="0" name="Variable">EffectVolume</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="545594369737296" type="Audio">
+                            <param id="0" name="Tag">&quot;Effect&quot;</param>
+                            <param id="1" name="dB">(EffectVolume * 10) - 20</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="890054962226508" type="Audio">
+                            <param id="0" name="Tag">&quot;Effect&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="812773214233922">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="406150382956343" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="114661799747065" type="Audio">
+                            <param id="0" name="Tag">&quot;Effect&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

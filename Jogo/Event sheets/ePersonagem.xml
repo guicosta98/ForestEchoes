@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ePersonagem</name>
+    <events>
+        <event-group description="" sid="994596260403768" title="Camera">
+            <sub-events>
+                <event-block sid="635829239200333">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="765056192428376" type="System" />
+                        <condition id="7" inverted="1" name="Is mirrored" sid="865227883951335" type="NegrinhoSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="722994915948431" type="camera">
+                            <param id="0" name="X">lerp(Self.X, NegrinhoSprite.X+200, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, NegrinhoSprite.Y-100, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="742766712228258">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="885643135769592" type="System" />
+                        <condition id="7" name="Is mirrored" sid="202823161934069" type="NegrinhoSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="106746386472140" type="camera">
+                            <param id="0" name="X">lerp(Self.X, NegrinhoSprite.X-200, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, NegrinhoSprite.Y-100, 0.03)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="315748923021325" title="WallJump">
+            <sub-events>
+                <event-block sid="420253563608984">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="296935595904503" type="PlayerHitBox" />
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="848731114001240" type="PlayerHitBox" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="998772400470926" type="PlayerHitBox">
+                            <param id="0" name="Instance variable">isFighting</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="431950257605674" type="NegrinhoSprite">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="313828985262543">
+                    <conditions>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="200986952077899" type="PlayerHitBox" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="830982541873943">
+                            <conditions>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="193466444686809" type="PlayerHitBox">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="319082828757058" type="PlayerHitBox">
+                                    <param id="0" name="Max fall speed">50</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="399323778404114" type="NegrinhoSprite">
+                                    <param id="0" name="Animation">&quot;wallSlide&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="580778020471403" type="NegrinhoSprite">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="434500914515276">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="755715911440485" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="512610034892672" type="PlayerHitBox">
+                                            <param id="0" name="Vector X">-500</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="146684067217006" type="PlayerHitBox">
+                                            <param id="0" name="Vector Y">-500</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="916904818445194">
+                            <conditions>
+                                <condition behavior="Platform" id="10" name="Is by wall" sid="781891288817100" type="PlayerHitBox">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="524670964034492" type="PlayerHitBox">
+                                    <param id="0" name="Max fall speed">50</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="334515099506499" type="NegrinhoSprite">
+                                    <param id="0" name="Animation">&quot;wallSlide&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="578088454526611" type="NegrinhoSprite">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="535900235278322">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="640555568534032" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="687896170490436" type="PlayerHitBox">
+                                            <param id="0" name="Vector X">500</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="768261356598742" type="PlayerHitBox">
+                                            <param id="0" name="Vector Y">-500</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="212803410564836">
+                            <conditions>
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="705725624249359" type="PlayerHitBox">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="218841258359179" type="PlayerHitBox">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="229850871744713" type="PlayerHitBox">
+                                    <param id="0" name="Max fall speed">800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="546095267625432" title="PlayerMovement">
+            <sub-events>
+                <event-block sid="865053932555199">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="128805591495486" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="565012508475344" type="NegrinhoSprite">
+                            <param id="0" name="Object">PlayerHitBox</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="109175266075142">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="215401437118955" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="882403312231251" type="PlayerHitBox">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="510032723500965" type="PlayerHitBox">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="346811661971440" type="NegrinhoSprite">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="463157333011059">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="293235714534549" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="793786777252280" type="PlayerHitBox">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="955047160507415" type="PlayerHitBox">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="531032264790373" type="NegrinhoSprite">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="556197455406533">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="918221493171340" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                                <condition behavior="Platform" id="3" name="Is jumping" sid="376896246736092" type="PlayerHitBox" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="130534690719374" type="NegrinhoSprite">
+                                    <param id="0" name="Animation">&quot;jump1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="131439485459912" type="PlayerHitBox">
+                                    <param id="0" name="Instance variable">onAir</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="478438897654415">
+                            <conditions>
+                                <condition behavior="Platform" id="7" name="On stopped" sid="148865181552683" type="PlayerHitBox" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="459012801538012" type="PlayerHitBox">
+                                    <param id="0" name="Instance variable">isFighting</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="323361403846750" type="NegrinhoSprite">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="843137438323076">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="427284902753113" type="PlayerHitBox" />
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="445943914935462" type="PlayerHitBox">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Speed">201</param>
+                                </condition>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="410792689775814" type="PlayerHitBox" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="671451518932198" type="NegrinhoSprite">
+                                    <param id="0" name="Animation">&quot;stealth&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="764506471622310">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="946749994130810" type="PlayerHitBox" />
+                                <condition behavior="Platform" id="1" name="Compare speed" sid="234966931213747" type="PlayerHitBox">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Speed">300</param>
+                                </condition>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="111118628690625" type="PlayerHitBox" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="521140280405415" type="NegrinhoSprite">
+                                    <param id="0" name="Animation">&quot;run&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="794789315775146">
+                            <conditions>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="873396574118228" type="PlayerHitBox" />
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="208727027850208" type="PlayerHitBox">
+                                    <param id="0" name="Side">0</param>
+                                </condition>
+                                <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="626651211285373" type="PlayerHitBox">
+                                    <param id="0" name="Side">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="864714212080876" type="NegrinhoSprite">
+                                    <param id="0" name="Animation">&quot;jump2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="994753937093235">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="893719263797360" type="Keyboard">
+                                    <param id="0" name="Key">17 (Ctrl)</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="758015383260706" type="PlayerHitBox">
+                                    <param id="0" name="Instance variable">isFighting</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="590773051524621" type="PlayerHitBox">
+                                    <param id="0" name="Max Speed">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="114394171070382">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="322061105532584" type="Keyboard">
+                                    <param id="0" name="Key">17 (Ctrl)</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="354286666188856" type="PlayerHitBox">
+                                    <param id="0" name="Instance variable">isFighting</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="909714516630229" type="PlayerHitBox">
+                                    <param id="0" name="Max Speed">400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="595339329689314">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="903122793984354" type="PlayerHitBox">
+                                    <param id="0" name="Instance variable">isFighting</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="162414721263401" type="PlayerHitBox">
+                                    <param id="0" name="Max Speed">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="690148621746462">
+                            <conditions>
+                                <condition behavior="Platform" id="3" name="Is jumping" sid="462584377623116" type="PlayerHitBox" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="472273569829790" type="PlayerHitBox">
+                                    <param id="0" name="Instance variable">onAir</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="481652542566271">
+                            <conditions>
+                                <condition behavior="Platform" id="9" name="On landed" sid="513795326043112" type="PlayerHitBox" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="452710473477358" type="PlayerHitBox">
+                                    <param id="0" name="Instance variable">onAir</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="419700874370508" title="Combate">
+            <sub-events>
+                <event-block sid="267433663836988">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="581695283576209" type="Keyboard">
+                            <param id="0" name="Key">90 (Z)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="485406900776460">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="314931441405116" type="PlayerHitBox">
+                                    <param id="0" name="Instance variable">isFighting</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="603943826663456">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="334611369366810" type="PlayerHitBox">
+                                            <param id="0" name="Instance variable">onAir</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="291296518941105" type="PlayerHitBox">
+                                            <param id="0" name="Instance variable">isFighting</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action disabled="1" id="4" name="Set animation" sid="284996112691667" type="NegrinhoSprite">
+                                            <param id="0" name="Animation">&quot;jumpAttack&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="989810975902212">
+                                    <conditions>
+                                        <condition behavior="Platform" id="0" name="Is moving" sid="788389527962866" type="PlayerHitBox" />
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="469776427145873" type="PlayerHitBox">
+                                            <param id="0" name="Instance variable">onAir</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Stop" sid="392808523563586" type="NegrinhoSprite" />
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="171106869158443" type="PlayerHitBox">
+                                            <param id="0" name="Max Speed">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="178395877225007">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="878195645094796" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="135531265406591" type="PlayerHitBox">
+                                            <param id="0" name="Instance variable">isFighting</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="900762054764530" type="NegrinhoSprite">
+                                            <param id="0" name="Animation">&quot;ataque&quot; &amp; PlayerHitBox.combo</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="133500355711844" type="PlayerHitBox">
+                                            <param id="0" name="Instance variable">comboTimer</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="749948357498784">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="870929287631478" type="PlayerHitBox">
+                                                    <param id="0" name="Instance variable">combo</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">PlayerHitBox.comboMax</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="789391486770501" type="PlayerHitBox">
+                                                    <param id="0" name="Instance variable">combo</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="270606200116307">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="426521441900779" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="871578008259390" type="PlayerHitBox">
+                                                    <param id="0" name="Instance variable">combo</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="727074085600355">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="842845144647761" type="PlayerHitBox">
+                            <param id="0" name="Instance variable">isFighting</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="305240441291010">
+                            <conditions>
+                                <condition id="5" name="On any finished" sid="800299763352999" type="NegrinhoSprite" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="918652271796490" type="PlayerHitBox">
+                                    <param id="0" name="Instance variable">isFighting</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="744821739376850" type="PlayerHitBox">
+                                    <param id="0" name="Max Speed">400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="148327931035569">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="661576538583674" type="PlayerHitBox">
+                            <param id="0" name="Instance variable">comboTimer</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="262952542788716" type="PlayerHitBox">
+                            <param id="0" name="Instance variable">comboTimer</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="174711738411761">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="191939011395420" type="PlayerHitBox">
+                            <param id="0" name="Instance variable">comboTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="685836037871473" type="PlayerHitBox">
+                            <param id="0" name="Instance variable">comboTimer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="842994842009442" type="PlayerHitBox">
+                            <param id="0" name="Instance variable">combo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="164662306455669" title="Teste">
+            <sub-events>
+                <event-block sid="319136329080351">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="795655983930205" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="902881269358238" type="Combo">
+                            <param id="0" name="Text">PlayerHitBox.combo</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

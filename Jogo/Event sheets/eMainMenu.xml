@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMainMenu</name>
+    <events>
+        <include>SoundManager</include>
+        <variable constant="0" name="GraphicsNum" sid="641242702060870" static="0" type="number">0</variable>
+        <variable constant="0" name="EffectVolume" sid="573801245580414" static="0" type="number">1</variable>
+        <variable constant="0" name="Fullscreen" sid="159446279416785" static="0" type="number">0</variable>
+        <variable constant="0" name="MusicVolume" sid="945091688500330" static="0" type="number">1</variable>
+        <event-block sid="358913196082345">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="807945891160411" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="450985083205505" type="MainButtons">
+                    <param id="0" name="Instance variable">Selected</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="552007216450835" title="Buttons">
+            <sub-events>
+                <event-block sid="129615189360184">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="458945538180531" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="912745832002253" type="Novo">
+                            <param id="0" name="Animation">&quot;Over&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="780763704477434" type="Continue">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="191586001955057" type="Opcoes">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="412255433594403" type="Quit">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="840911859021598">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="579894748865687" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="516632464543368" type="Novo">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="135940150926232" type="Continue">
+                            <param id="0" name="Animation">&quot;Over&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="402424343037672" type="Opcoes">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="569618416429209" type="Quit">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="237288727441335">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="161445981671856" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="511296678842056" type="Novo">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="585217890616427" type="Continue">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="655665395222726" type="Opcoes">
+                            <param id="0" name="Animation">&quot;Over&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="597638568916518" type="Quit">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="516162887850585">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="131771186212295" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="360328513575382" type="Novo">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="284469671641178" type="Continue">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="977252077043269" type="Opcoes">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="220004244000604" type="Quit">
+                            <param id="0" name="Animation">&quot;Over&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="739299437123648">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="297142588251843" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="639691628471120">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="506828306461148" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="893201919505730" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="401801257793549">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="445911029797424" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="821165620486026" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="830992718704194">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="253235371424943" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="707716267757680">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="440655026060843" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="325439870497057" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="708852943816301">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="775214005154914" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="367000124380588" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="742768919940321">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="872026259836362" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="850883998152882">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="954808854905664" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="305010130971959" type="System">
+                            <param id="0" name="Layout">Layout 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="415151068290946">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="333542857572461" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-37" name="Load" sid="823157111766243" type="System">
+                            <param id="0" name="Slot">&quot;mysave&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="417904328893489" type="System">
+                            <param id="0" name="Layout">Layout 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="328082113975876">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="327865124356600" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="226767810185421" type="System">
+                            <param id="0" name="Layout">LYOpcoes</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="689593709622728">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="526326496091683" type="MainButtons">
+                            <param id="0" name="Instance variable">Selected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="816602290890826" type="Browser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
