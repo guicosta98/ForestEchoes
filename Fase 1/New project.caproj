@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1p36u6xw5b8bf</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="fase1" sid="275218559816302">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\saga\Desktop\Ojogo\Terra.png" />
+            <tiles />
+        </object-type>
+        <object-type name="chao_caverna" sid="878351871251139">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\saga\Desktop\Ojogo\cave.png" />
+            <tiles />
+        </object-type>
+        <object-type name="fase1plataformas2plano" sid="353542773869145">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\saga\Desktop\Ojogo\Terra.png" />
+            <tiles />
+        </object-type>
+        <object-type name="background_caverna" sid="217327475416408">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\saga\Desktop\Ojogo\cave2.png" />
+            <tiles />
+        </object-type>
+        <object-type name="2parteFase1" sid="225591046900264">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\saga\Desktop\Ojogo\Terra.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Tilemap" sid="311527376409120">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\saga\Desktop\Ojogo\fase3.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Arvre1" sid="870228680355156">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="665718425208137" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\saga\Desktop\Ojogo\arv1.png">
+                        <collision-poly>
+                            <point x="0.138393" y="0.138393" />
+                            <point x="0.5" y="0.00892857" />
+                            <point x="0.852679" y="0.147321" />
+                            <point x="0.944196" y="0.5" />
+                            <point x="0.609375" y="0.609375" />
+                            <point x="0.5" y="0.979911" />
+                            <point x="0.388393" y="0.611607" />
+                            <point x="0.109375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Arvre2" sid="434146709983454">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225422686410158" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\saga\Desktop\Ojogo\arv2.png">
+                        <collision-poly>
+                            <point x="0.120536" y="0.120536" />
+                            <point x="0.5" y="0.0111607" />
+                            <point x="0.808036" y="0.191964" />
+                            <point x="0.939732" y="0.5" />
+                            <point x="0.647321" y="0.647321" />
+                            <point x="0.5" y="0.991071" />
+                            <point x="0.352679" y="0.647321" />
+                            <point x="0.0915179" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Arvre3" sid="586442123314154">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="454970267818253" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\saga\Desktop\Ojogo\arv3.png">
+                        <collision-poly>
+                            <point x="0.263393" y="0.263393" />
+                            <point x="0.5" y="0.0558036" />
+                            <point x="0.633929" y="0.366071" />
+                            <point x="0.808036" y="0.5" />
+                            <point x="0.613839" y="0.613839" />
+                            <point x="0.5" y="0.995536" />
+                            <point x="0.444196" y="0.555804" />
+                            <point x="0.377232" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="teia" sid="269723244968086">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="482268687320463" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\saga\Desktop\Ojogo\montagem\teia2.png">
+                        <collision-poly>
+                            <point x="0.396923" y="0.357341" />
+                            <point x="0.5" y="0.222992" />
+                            <point x="0.749231" y="0.225762" />
+                            <point x="0.853846" y="0.5" />
+                            <point x="0.736923" y="0.763158" />
+                            <point x="0.5" y="0.891967" />
+                            <point x="0.289231" y="0.739612" />
+                            <point x="0.343077" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="carrinhoMineiracao" sid="309293416495240">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="771640065911099" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\saga\Desktop\Ojogo\montagem\carrinhominer.png">
+                        <collision-poly>
+                            <point x="0.197802" y="0.185567" />
+                            <point x="0.5" y="0" />
+                            <point x="0.791209" y="0.195876" />
+                            <point x="0.901099" y="0.5" />
+                            <point x="0.884615" y="0.891753" />
+                            <point x="0.10989" y="0.896907" />
+                            <point x="0.0934066" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pá" sid="501011443913788">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399701243206383" speed="5">
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.502008" original-source="C:\Users\saga\Desktop\Ojogo\montagem\pá.png">
+                        <collision-poly>
+                            <point x="0.0547945" y="0.0160643" />
+                            <point x="0.493151" y="0" />
+                            <point x="0.808219" y="0.0562249" />
+                            <point x="0.630137" y="0.497992" />
+                            <point x="0.821918" y="0.947791" />
+                            <point x="0.493151" y="0.987952" />
+                            <point x="0.246575" y="0.927711" />
+                            <point x="0.383562" y="0.497992" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="drytree1" sid="121397528235411">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="707878435510213" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501597" original-source="C:\Users\saga\Desktop\Ojogo\montagem\arvre.png">
+                        <collision-poly>
+                            <point x="0.46" y="0.440895" />
+                            <point x="0.5" y="0.182109" />
+                            <point x="0.583333" y="0.399361" />
+                            <point x="0.943333" y="0.498403" />
+                            <point x="0.63" y="0.645367" />
+                            <point x="0.5" y="0.971246" />
+                            <point x="0.43" y="0.587859" />
+                            <point x="0.246667" y="0.498403" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="drytree2" sid="822513761828413">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="714923994029890" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\saga\Desktop\Ojogo\montagem\arvre2.png">
+                        <collision-poly>
+                            <point x="0.358696" y="0.351064" />
+                            <point x="0.5" y="0.0425532" />
+                            <point x="0.798913" y="0.196809" />
+                            <point x="0.581522" y="0.5" />
+                            <point x="0.5" y="0.93617" />
+                            <point x="0.478261" y="0.531915" />
+                            <point x="0.478261" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="drytree3" sid="870593594939255">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="967913242673501" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\saga\Desktop\Ojogo\montagem\arvre3.png">
+                        <collision-poly>
+                            <point x="0.46" y="0.46" />
+                            <point x="0.5" y="0.236667" />
+                            <point x="0.66" y="0.34" />
+                            <point x="0.57" y="0.5" />
+                            <point x="0.633333" y="0.633333" />
+                            <point x="0.5" y="0.983333" />
+                            <point x="0.0166667" y="0.983333" />
+                            <point x="0.356667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lapide" sid="254243027498180">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="889754826145953" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503546" original-source="C:\Users\saga\Desktop\Ojogo\montagem\lapide.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.212766" />
+                            <point x="0.5" y="0" />
+                            <point x="0.713333" y="0.304965" />
+                            <point x="0.72" y="0.496454" />
+                            <point x="0.806667" y="0.794326" />
+                            <point x="0.5" y="0.992908" />
+                            <point x="0.08" y="0.914894" />
+                            <point x="0.2" y="0.496454" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="igreja" sid="499141933926982">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990412816664800" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501341" original-source="C:\Users\saga\Desktop\Ojogo\montagem\igreja.png">
+                        <collision-poly>
+                            <point x="0.167732" y="0.281501" />
+                            <point x="0.5" y="0.302949" />
+                            <point x="0.900958" y="0.16622" />
+                            <point x="0.974441" y="0.49866" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.0942492" y="0.49866" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="corvo" sid="699830047381375">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="251785677577436" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\saga\Desktop\Ojogo\montagem\corvo.png">
+                        <collision-poly>
+                            <point x="0.0766667" y="0.109524" />
+                            <point x="0.5" y="0.104762" />
+                            <point x="0.756667" y="0.347619" />
+                            <point x="0.77" y="0.5" />
+                            <point x="0.836667" y="0.766667" />
+                            <point x="0.5" y="0.647619" />
+                            <point x="0.32" y="0.542857" />
+                            <point x="0.106667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="espinhos" sid="666919963724775">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="886768464888057" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503067" original-source="C:\Users\saga\Desktop\Ojogo\montagem\espinhos.png">
+                        <collision-poly>
+                            <point x="0.140845" y="0.122699" />
+                            <point x="0.5" y="0.0245399" />
+                            <point x="0.866197" y="0.116564" />
+                            <point x="0.908451" y="0.496933" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="armadilha" sid="118313469233352">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="889023307257760" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\saga\Desktop\Ojogo\montagem\arnadilha.png">
+                        <collision-poly>
+                            <point x="0.0723684" y="0.15942" />
+                            <point x="0.5" y="0.057971" />
+                            <point x="0.907895" y="0.202899" />
+                            <point x="0.947368" y="0.492754" />
+                            <point x="0.888158" y="0.753623" />
+                            <point x="0.5" y="0.913043" />
+                            <point x="0.125" y="0.724638" />
+                            <point x="0.0460526" y="0.492754" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="488533243310060">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="117445937853897" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\saga\Desktop\Ojogo\montagem\owl.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.15625" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.84375" y="0.5" />
+                            <point x="0.84375" y="0.84375" />
+                            <point x="0.5" y="0.921875" />
+                            <point x="0.15625" y="0.84375" />
+                            <point x="0.140625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances />
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
