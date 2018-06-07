@@ -505,7 +505,7 @@
         </event-group>
         <event-group description="" sid="164662306455669" title="Teste">
             <sub-events>
-                <event-block sid="319136329080351">
+                <event-block disabled="1" sid="319136329080351">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="795655983930205" type="System" />
                     </conditions>

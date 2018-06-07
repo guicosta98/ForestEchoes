@@ -86,10 +86,13 @@
         </event-block>
         <event-group description="" sid="666737023547256" title="KeyboardNav">
             <sub-events>
-                <event-block sid="678181685414032">
+                <event-block any="1" sid="678181685414032">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="904453825309593" type="Keyboard">
                             <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="784993458053132" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -122,10 +125,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="386805102773389">
+                <event-block any="1" sid="386805102773389">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="981483868809661" type="Keyboard">
                             <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="294364839431146" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -167,10 +173,10 @@
                             <param id="0" name="Y">100*(Sprite2.pos+1)</param>
                         </action>
                         <action id="0" name="Set text" sid="328804282596266" type="EffectNum">
-                            <param id="0" name="Text">EffectSlide.Value</param>
+                            <param id="0" name="Text">EffectSlide.Value * 100</param>
                         </action>
                         <action id="0" name="Set text" sid="704685943637841" type="musicNum">
-                            <param id="0" name="Text">MusicSlide.Value</param>
+                            <param id="0" name="Text">MusicSlide.Value * 100</param>
                         </action>
                         <action id="-9" name="Set value" sid="930988886620689" type="System">
                             <param id="0" name="Variable">MusicVolume</param>
@@ -258,10 +264,13 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="262894474885003">
+                <event-block any="1" sid="262894474885003">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="319327863770189" type="Keyboard">
                             <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="981585962586724" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -306,10 +315,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="676247538673194">
+                <event-block any="1" sid="676247538673194">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="783780395405911" type="Keyboard">
                             <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="292508715049290" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -354,10 +366,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="481267269137592">
+                <event-block any="1" sid="481267269137592">
                     <conditions>
                         <condition id="2" name="Key is down" sid="638486136219259" type="Keyboard">
                             <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="604220022403481" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -400,10 +415,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="541856284304531">
+                <event-block any="1" sid="541856284304531">
                     <conditions>
                         <condition id="2" name="Key is down" sid="758356849878802" type="Keyboard">
                             <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="432756645847827" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
                     <actions />

@@ -2,7 +2,7 @@
 <c2layout>
     <name>LYMainMenu</name>
     <sid>129033604259394</sid>
-    <event-sheet></event-sheet>
+    <event-sheet>eMainMenu</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -15,7 +15,7 @@
     <layers>
         <layer name="Layer 0" sid="759093446490723">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
+            <background-color>204,255,255</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -42,14 +42,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>557</x>
-                        <y>352</y>
+                        <x>640</x>
+                        <y>385</y>
                         <z>0</z>
                         <width>224</width>
                         <height>59</height>
                         <depth>0</depth>
-                        <hotspotX>0.4375</hotspotX>
-                        <hotspotY>0.847457647</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.508474588</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -67,39 +67,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>570</x>
-                        <y>469</y>
+                        <x>640</x>
+                        <y>517</y>
                         <z>0</z>
                         <width>197</width>
                         <height>62</height>
                         <depth>0</depth>
-                        <hotspotX>0.538071036</hotspotX>
-                        <hotspotY>0.661290348</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Quit" uid="20">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Selected>0</Selected>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>593</x>
-                        <y>618</y>
-                        <z>0</z>
-                        <width>138</width>
-                        <height>77</height>
-                        <depth>0</depth>
-                        <hotspotX>0.695652187</hotspotX>
-                        <hotspotY>0.844155848</hotspotY>
+                        <hotspotX>0.502538085</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -117,14 +92,39 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>626</x>
-                        <y>224</y>
+                        <x>640</x>
+                        <y>254</y>
                         <z>0</z>
                         <width>153</width>
                         <height>47</height>
                         <depth>0</depth>
-                        <hotspotX>0.790849686</hotspotX>
+                        <hotspotX>0.503268003</hotspotX>
                         <hotspotY>0.510638297</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Quit" uid="69">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Selected>0</Selected>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>640</x>
+                        <y>648</y>
+                        <z>0</z>
+                        <width>138</width>
+                        <height>77</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.506493509</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
