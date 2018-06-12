@@ -900,8 +900,8 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
@@ -925,11 +925,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>631.900878906</x>
-                        <y>976.422424316</y>
+                        <x>628</x>
+                        <y>347</y>
                         <z>0</z>
                         <width>250</width>
-                        <height>250</height>
+                        <height>300</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -937,12 +937,12 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Menu" uid="9">
+                <instance type="acMenu" uid="9">
                     <properties>
                         <type>Button</type>
                         <text>Menu</text>
                         <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <enabled>Yes</enabled>
                         <auto-font-size>Yes</auto-font-size>
                         <id-optional></id-optional>
@@ -954,8 +954,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>599.601074219</x>
-                        <y>874.89630127</y>
+                        <x>596</x>
+                        <y>344</y>
                         <z>0</z>
                         <width>72</width>
                         <height>24</height>
@@ -964,12 +964,12 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Opçoes" uid="10">
+                <instance type="abOpçoes" uid="10">
                     <properties>
                         <type>Button</type>
-                        <text>Options</text>
+                        <text>Opções</text>
                         <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <enabled>Yes</enabled>
                         <auto-font-size>Yes</auto-font-size>
                         <id-optional></id-optional>
@@ -981,8 +981,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>603.28894043</x>
-                        <y>987.494445801</y>
+                        <x>596</x>
+                        <y>290</y>
                         <z>0</z>
                         <width>72</width>
                         <height>24</height>
@@ -991,12 +991,12 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="QuitP" uid="11">
+                <instance type="adQuitP" uid="11">
                     <properties>
                         <type>Button</type>
-                        <text>Quit</text>
+                        <text>Sair</text>
                         <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <enabled>Yes</enabled>
                         <auto-font-size>Yes</auto-font-size>
                         <id-optional></id-optional>
@@ -1008,8 +1008,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>600.523071289</x>
-                        <y>934.88885498</y>
+                        <x>596</x>
+                        <y>398</y>
                         <z>0</z>
                         <width>72</width>
                         <height>24</height>
@@ -1018,12 +1018,12 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Resume" uid="12">
+                <instance type="aaResume" uid="12">
                     <properties>
                         <type>Button</type>
-                        <text>Resume</text>
+                        <text>Continuar</text>
                         <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <enabled>Yes</enabled>
                         <auto-font-size>Yes</auto-font-size>
                         <id-optional></id-optional>
@@ -1035,8 +1035,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>605.138549805</x>
-                        <y>1029.952758789</y>
+                        <x>596</x>
+                        <y>237</y>
                         <z>0</z>
                         <width>72</width>
                         <height>24</height>
@@ -1059,8 +1059,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>624.522338867</x>
-                        <y>997.647338867</y>
+                        <x>626</x>
+                        <y>370</y>
                         <z>0</z>
                         <width>224</width>
                         <height>58</height>
@@ -1075,7 +1075,7 @@
                     <properties>
                         <value>0</value>
                         <minimum>0</minimum>
-                        <maximum>100</maximum>
+                        <maximum>1</maximum>
                         <step>0.01</step>
                         <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
@@ -1085,8 +1085,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>529.455627441</x>
-                        <y>902.583435059</y>
+                        <x>528</x>
+                        <y>275</y>
                         <z>0</z>
                         <width>200</width>
                         <height>25</height>
@@ -1109,8 +1109,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>529.455688477</x>
-                        <y>1008.724975586</y>
+                        <x>528</x>
+                        <y>345</y>
                         <z>0</z>
                         <width>200</width>
                         <height>25</height>
@@ -1134,8 +1134,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>632.828491211</x>
-                        <y>880.895202637</y>
+                        <x>626</x>
+                        <y>255</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -1148,7 +1148,7 @@
                 </instance>
                 <instance type="EffectVOp" uid="16">
                     <properties>
-                        <text>Volume do jogo</text>
+                        <text>Volume dos efeitos</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
@@ -1161,8 +1161,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>628.213012695</x>
-                        <y>987.036804199</y>
+                        <x>626</x>
+                        <y>325</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -1188,14 +1188,91 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>321.870880127</x>
-                        <y>735.468261719</y>
+                        <x>318</x>
+                        <y>222</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextBox" uid="70">
+                    <properties>
+                        <text>Voltar</text>
+                        <placeholder></placeholder>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <read-only>Yes</read-only>
+                        <spell-check>No</spell-check>
+                        <type>Text</type>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>556</x>
+                        <y>467</y>
+                        <z>0</z>
+                        <width>150</width>
+                        <height>22</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="FSOP" uid="67">
+                    <properties>
+                        <type>Checkbox</type>
+                        <text></text>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>696</x>
+                        <y>407</y>
+                        <z>0</z>
+                        <width>21</width>
+                        <height>19</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="FullScreenOp" uid="68">
+                    <properties>
+                        <text>Tela Cheia</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Right</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>730</x>
+                        <y>416</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1723,6 +1800,138 @@
                         <z>0</z>
                         <width>1458.737060547</width>
                         <height>62.856628418</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Inimigo" sid="626193755588641">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="CorpoSeco" uid="82">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1151</x>
+                        <y>997</y>
+                        <z>0</z>
+                        <width>114.498908997</width>
+                        <height>114.498908997</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CorpoSecoHitBox" uid="83">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <InitialPosX>0</InitialPosX>
+                        <State>0</State>
+                        <Side>-1</Side>
+                        <DistanceAtk>50</DistanceAtk>
+                        <DistanceFollow>350</DistanceFollow>
+                        <HP>3</HP>
+                        <Atk>true</Atk>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1151</x>
+                        <y>998</y>
+                        <z>0</z>
+                        <width>37.024517059</width>
+                        <height>89.15901947</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EdgeCollider" uid="84">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>836</x>
+                        <y>1030</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EdgeCollider" uid="85">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1475</x>
+                        <y>1033</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>

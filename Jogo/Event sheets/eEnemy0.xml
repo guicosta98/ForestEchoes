@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eEnemy0</name>
+    <events>
+        <event-block sid="657256042777344">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="881410239976858" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="523888419372630" type="CorpoSecoHitBox">
+                    <param id="0" name="Instance variable">InitialPosX</param>
+                    <param id="1" name="Value">Self.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="476174088525377">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="554602650497864" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="723717259290344" type="CorpoSeco">
+                    <param id="0" name="Object">CorpoSecoHitBox</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="508644776618916" title="States">
+            <sub-events>
+                <event-block sid="435320089419194">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="659218212453046" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="658171579718360" type="CorpoSeco">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="405576728111853">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="817116166564732" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="995197056087168" type="CorpoSeco">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="568908809419819">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="325539057623278" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="824241677467354" type="CorpoSecoHitBox">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="246882888892272" type="CorpoSeco">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="537017061082847">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="127541479371650" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="405177727438770" type="CorpoSecoHitBox">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="332291219895290" type="CorpoSeco">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="743280261389121">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="809643387502788" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="474150681833097" type="CorpoSeco">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="283784659758217">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="739325808506048" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="182478146139480" type="CorpoSecoHitBox">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="168134577013662" type="CorpoSeco">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="550327823318758">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="863603032201258" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="149243812397776" type="CorpoSecoHitBox">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="353302545445321" type="CorpoSeco">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="585403901844014">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="749326732811819" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="121381286903581">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="411738235569181" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">Atk</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="888061329293504" type="CorpoSeco">
+                                    <param id="0" name="Animation">&quot;Atk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="371221618005085">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="498927588907048" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="166588452837686" type="CorpoSeco">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="642098266178109">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="724879329412502" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="564395885969323" type="CorpoSeco">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="676913389978975" title="StatesActions">
+            <sub-events>
+                <event-block sid="562993043962281">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="672734202634596" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="238228791497892" type="System">
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="825618510935946">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="156835025856781" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">DistanceAtk</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">abs(PlayerHitBox.X - Self.X)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="650772744926634" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="633290017350258">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="396959771730364" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="569116630648389" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="352990907776143">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="393178077670163" type="CorpoSecoHitBox">
+                            <param id="0" name="Object">EdgeCollider</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="602352223753853" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="915321968616019">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="618186860590371" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">Side</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="657280132176361" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">Side</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="427917890578253">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="383089051840687" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">Side</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="737746903616131" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">Side</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="483327442789551">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="575106758239328" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="852651925529073">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="362221018326810" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="205500212010494" type="System">
+                                    <param id="0" name="Seconds">1.8</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="447575072989133" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="148248179452083" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="201044808938013">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="917764430570094" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="498998307892681" type="System">
+                                    <param id="0" name="Seconds">1.8</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="560734843702192" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="239418889599911" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="720687330431530">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="440157214841518" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">DistanceAtk</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">abs(PlayerHitBox.X - Self.X)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="860110213003914">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="878478772874812" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="957287789012197" type="CorpoSecoHitBox">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="360696935481293">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="139231932054302" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="618254792639019">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="676745609938585" type="CorpoSecoHitBox">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">PlayerHitBox.Y + Self.Height</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="171660242124688" type="CorpoSecoHitBox">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">PlayerHitBox.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="980961165140689">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="209479080111555" type="CorpoSecoHitBox">
+                                            <param id="0" name="Instance variable">DistanceFollow</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">abs(PlayerHitBox.X - Self.X)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="205311046124372" type="CorpoSecoHitBox">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="712621304805611">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="483036941025281" type="CorpoSecoHitBox">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">PlayerHitBox.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="316775279405235" type="CorpoSecoHitBox">
+                                                    <param id="0" name="Instance variable">Side</param>
+                                                    <param id="1" name="Value">-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="181170048744313">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="406337651609912" type="CorpoSecoHitBox">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">PlayerHitBox.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="872511641839780" type="CorpoSecoHitBox">
+                                                    <param id="0" name="Instance variable">Side</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="254686686207881">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="625997525808504" type="CorpoSecoHitBox">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="392309264671979" type="CorpoSecoHitBox">
+                                            <param id="0" name="Instance variable">DistanceFollow</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">abs(PlayerHitBox.X - Self.X)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="947035672268745" type="System">
+                                            <param id="0" name="Seconds">2.8</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="984073906821987" type="CorpoSecoHitBox">
+                                            <param id="0" name="Instance variable">Side</param>
+                                            <param id="1" name="Value">Self.Side * -1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="596541518468689" type="CorpoSecoHitBox">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="409930007392875">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="949810109301334" type="CorpoSeco">
+                            <param id="0" name="Animation">&quot;Atk&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="457205501859707" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">Atk</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="861564003243004" type="System">
+                            <param id="0" name="Seconds">0.8</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="374040261469748" type="CorpoSecoHitBox">
+                            <param id="0" name="Instance variable">Atk</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -15,7 +15,6 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
@@ -70,9 +69,6 @@
             <object-type name="GR" sid="440832989289726">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="GraphicsDropdown" sid="637319270583382">
-                <plugin id="List" />
-            </object-type>
             <object-type name="musicNum" sid="255423114281125">
                 <plugin id="Text" />
             </object-type>
@@ -86,7 +82,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="998380614043322" speed="5">
-                        <frame duration="1" hotspotX="0.52" hotspotY="0.416667" />
+                        <frame duration="1" hotspotX="0.52" hotspotY="0.42" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -118,7 +114,10 @@
             <object-type name="VoltarBtn" sid="995921291534284">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="584051509733611" speed="5">
+                    <animation framecount="1" loop="0" name="Base" pingpong="0" repeatcount="1" repeatto="0" sid="584051509733611" speed="5">
+                        <frame duration="1" hotspotX="0.481081" hotspotY="0.373913" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Over" pingpong="0" repeatcount="1" repeatto="0" sid="217153462360504" speed="5">
                         <frame duration="1" hotspotX="0.481081" hotspotY="0.373913" />
                     </animation>
                 </animation-folder>
@@ -156,20 +155,20 @@
                 <object-type name="TextBox" sid="663518447746781">
                     <plugin id="TextBox" />
                 </object-type>
-                <object-type name="VoltarOp" sid="838414073089058">
+                <object-type name="FullScreenOp" sid="838414073089058">
                     <plugin id="Text" />
                 </object-type>
             </object-folder>
-            <object-type name="Menu" sid="945172558499681">
+            <object-type name="acMenu" sid="945172558499681">
                 <plugin id="Button" />
             </object-type>
-            <object-type name="Opçoes" sid="142174748874477">
+            <object-type name="abOpçoes" sid="142174748874477">
                 <plugin id="Button" />
             </object-type>
-            <object-type name="QuitP" sid="135798988400313">
+            <object-type name="adQuitP" sid="135798988400313">
                 <plugin id="Button" />
             </object-type>
-            <object-type name="Resume" sid="744733462539798">
+            <object-type name="aaResume" sid="744733462539798">
                 <plugin id="Button" />
             </object-type>
             <object-type name="Sprite" sid="799937069410199">
@@ -190,10 +189,10 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Base" pingpong="0" repeatcount="1" repeatto="0" sid="571194861214500" speed="5">
-                        <frame duration="1" hotspotX="0.4375" hotspotY="0.847458" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.508475" />
                     </animation>
                     <animation framecount="1" loop="0" name="Over" pingpong="0" repeatcount="1" repeatto="0" sid="931491446797966" speed="5">
-                        <frame duration="1" hotspotX="0.558036" hotspotY="2.11864" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.508475" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -201,10 +200,10 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Base" pingpong="0" repeatcount="1" repeatto="0" sid="602543077103695" speed="5">
-                        <frame duration="1" hotspotX="0.79085" hotspotY="0.510638" />
+                        <frame duration="1" hotspotX="0.503268" hotspotY="0.510638" />
                     </animation>
                     <animation framecount="1" loop="0" name="Over" pingpong="0" repeatcount="1" repeatto="0" sid="888166786505060" speed="5">
-                        <frame duration="1" hotspotX="0.816993" hotspotY="2.65957" />
+                        <frame duration="1" hotspotX="0.503268" hotspotY="0.510638" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -212,10 +211,10 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Base" pingpong="0" repeatcount="1" repeatto="0" sid="124077855280309" speed="5">
-                        <frame duration="1" hotspotX="0.538071" hotspotY="0.66129" />
+                        <frame duration="1" hotspotX="0.502538" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="Over" pingpong="0" repeatcount="1" repeatto="0" sid="972352873259511" speed="5">
-                        <frame duration="1" hotspotX="0.634518" hotspotY="2.01613" />
+                        <frame duration="1" hotspotX="0.502538" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -223,10 +222,10 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Base" pingpong="0" repeatcount="1" repeatto="0" sid="769446581249662" speed="5">
-                        <frame duration="1" hotspotX="0.695652" hotspotY="0.844156" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506494" />
                     </animation>
                     <animation framecount="1" loop="0" name="Over" pingpong="0" repeatcount="1" repeatto="0" sid="978134289916477" speed="5">
-                        <frame duration="1" hotspotX="0.905797" hotspotY="1.62338" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506494" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -948,6 +947,265 @@
         <object-type name="Combo" sid="534523447516392">
             <plugin id="Text" />
         </object-type>
+        <object-type name="CorpoSeco" sid="576823374985899">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="977747706485131" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\idle\secoIdle_seco dile_0.png">
+                        <collision-poly>
+                            <point x="0.410156" y="0.210938" />
+                            <point x="0.65625" y="0.289063" />
+                            <point x="0.582031" y="0.996094" />
+                            <point x="0.378906" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\idle\secoIdle_seco dile_1.png">
+                        <collision-poly>
+                            <point x="0.410156" y="0.210938" />
+                            <point x="0.65625" y="0.289063" />
+                            <point x="0.582031" y="0.996094" />
+                            <point x="0.378906" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\idle\secoIdle_seco dile_2.png">
+                        <collision-poly>
+                            <point x="0.410156" y="0.210938" />
+                            <point x="0.65625" y="0.289063" />
+                            <point x="0.582031" y="0.996094" />
+                            <point x="0.378906" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\idle\secoIdle_seco dile_3.png">
+                        <collision-poly>
+                            <point x="0.410156" y="0.210938" />
+                            <point x="0.65625" y="0.289063" />
+                            <point x="0.582031" y="0.996094" />
+                            <point x="0.378906" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\idle\secoIdle_seco dile_4.png">
+                        <collision-poly>
+                            <point x="0.410156" y="0.210938" />
+                            <point x="0.65625" y="0.289063" />
+                            <point x="0.582031" y="0.996094" />
+                            <point x="0.378906" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\idle\secoIdle_seco dile_5.png">
+                        <collision-poly>
+                            <point x="0.410156" y="0.210938" />
+                            <point x="0.65625" y="0.289063" />
+                            <point x="0.582031" y="0.996094" />
+                            <point x="0.378906" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="196208395415548" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\walk\secoWalk_secoWalk_0.png">
+                        <collision-poly>
+                            <point x="0.439453" y="0.222656" />
+                            <point x="0.671875" y="0.302734" />
+                            <point x="0.578125" y="1" />
+                            <point x="0.242188" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\walk\secoWalk_secoWalk_1.png">
+                        <collision-poly>
+                            <point x="0.439453" y="0.222656" />
+                            <point x="0.671875" y="0.302734" />
+                            <point x="0.578125" y="1" />
+                            <point x="0.242188" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\walk\secoWalk_secoWalk_2.png">
+                        <collision-poly>
+                            <point x="0.439453" y="0.222656" />
+                            <point x="0.671875" y="0.302734" />
+                            <point x="0.578125" y="1" />
+                            <point x="0.242188" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\walk\secoWalk_secoWalk_3.png">
+                        <collision-poly>
+                            <point x="0.439453" y="0.222656" />
+                            <point x="0.671875" y="0.302734" />
+                            <point x="0.578125" y="1" />
+                            <point x="0.242188" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\walk\secoWalk_secoWalk_4.png">
+                        <collision-poly>
+                            <point x="0.439453" y="0.222656" />
+                            <point x="0.671875" y="0.302734" />
+                            <point x="0.578125" y="1" />
+                            <point x="0.242188" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\walk\secoWalk_secoWalk_5.png">
+                        <collision-poly>
+                            <point x="0.439453" y="0.222656" />
+                            <point x="0.671875" y="0.302734" />
+                            <point x="0.578125" y="1" />
+                            <point x="0.242188" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="Atk" pingpong="0" repeatcount="1" repeatto="0" sid="649182788492894" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\ataque\secoAtaque_secoAtaque_0.png">
+                        <collision-poly>
+                            <point x="0.417969" y="0.246094" />
+                            <point x="0.638672" y="0.248047" />
+                            <point x="0.585938" y="1" />
+                            <point x="0.234375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\ataque\secoAtaque_secoAtaque_1.png">
+                        <collision-poly>
+                            <point x="0.449219" y="0.246094" />
+                            <point x="0.638672" y="0.248047" />
+                            <point x="0.585938" y="1" />
+                            <point x="0.273438" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\ataque\secoAtaque_secoAtaque_2.png">
+                        <collision-poly>
+                            <point x="0.476563" y="0.253906" />
+                            <point x="0.732422" y="0.263672" />
+                            <point x="0.585938" y="1" />
+                            <point x="0.28125" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\ataque\secoAtaque_secoAtaque_3.png">
+                        <collision-poly>
+                            <point x="0.457031" y="0.246094" />
+                            <point x="0.716797" y="0.248047" />
+                            <point x="0.585938" y="1" />
+                            <point x="0.234375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\ataque\secoAtaque_secoAtaque_4.png">
+                        <collision-poly>
+                            <point x="0.519531" y="0.242188" />
+                            <point x="0.716797" y="0.248047" />
+                            <point x="0.585938" y="1" />
+                            <point x="0.234375" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="959177372531314" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\morte\secoMorte_secoMorte_0.png">
+                        <collision-poly>
+                            <point x="0.484375" y="0.359375" />
+                            <point x="0.644531" y="0.390625" />
+                            <point x="0.691406" y="0.507813" />
+                            <point x="0.589844" y="1" />
+                            <point x="0.394531" y="1" />
+                            <point x="0.361328" y="0.6875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\morte\secoMorte_secoMorte_1.png">
+                        <collision-poly>
+                            <point x="0.4375" y="0.535156" />
+                            <point x="0.527344" y="0.429688" />
+                            <point x="0.6875" y="0.433594" />
+                            <point x="0.601563" y="0.988281" />
+                            <point x="0.398438" y="1" />
+                            <point x="0.363281" y="0.783203" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\morte\secoMorte_secoMorte_2.png">
+                        <collision-poly>
+                            <point x="0.4375" y="0.535156" />
+                            <point x="0.710938" y="0.539063" />
+                            <point x="0.755859" y="0.738281" />
+                            <point x="0.636719" y="1" />
+                            <point x="0.40625" y="1" />
+                            <point x="0.347656" y="0.740234" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\morte\secoMorte_secoMorte_3.png">
+                        <collision-poly>
+                            <point x="0.398438" y="0.582031" />
+                            <point x="0.503906" y="0.5" />
+                            <point x="0.574219" y="1" />
+                            <point x="0.386719" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\morte\secoMorte_secoMorte_4.png">
+                        <collision-poly>
+                            <point x="0.335938" y="0.699219" />
+                            <point x="0.464844" y="0.566406" />
+                            <point x="0.568359" y="0.572266" />
+                            <point x="0.523438" y="1" />
+                            <point x="0.355469" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\morte\secoMorte_secoMorte_5.png">
+                        <collision-poly>
+                            <point x="0.390625" y="0.785156" />
+                            <point x="0.660156" y="0.761719" />
+                            <point x="0.785156" y="1" />
+                            <point x="0.269531" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\corpo seco\morte\secoMorte_secoMorte_6.png">
+                        <collision-poly>
+                            <point x="0.285156" y="0.914063" />
+                            <point x="0.761719" y="0.835938" />
+                            <point x="0.808594" y="1" />
+                            <point x="0.238281" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CorpoSecoHitBox" sid="188452414223600">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="InitialPosX" sid="473178183396304" type="number" />
+                <instance-variable name="State" sid="580648535418717" type="number" />
+                <instance-variable name="Side" sid="656098989910623" type="number" />
+                <instance-variable name="DistanceAtk" sid="285182244594987" type="number" />
+                <instance-variable name="DistanceFollow" sid="690078159741048" type="number" />
+                <instance-variable name="HP" sid="799530370160892" type="number" />
+                <instance-variable name="Atk" sid="677347786957526" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="257940907181839">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382585605589435" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.0546875" y="0" />
+                            <point x="0.945313" y="0" />
+                            <point x="0.953125" y="1" />
+                            <point x="0.046875" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EdgeCollider" sid="697498282591575">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="852165149458781" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="729734576006809">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="946607135364376" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\vespa\Idle\VespaIdle_vespaIdle_0.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\vespa\Idle\VespaIdle_vespaIdle_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\edu_a\Documents\ForestEhoes\animacoes\inimigos\vespa\Idle\VespaIdle_vespaIdle_2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="MainButtons" plugin-id="Sprite" sid="264715700066859">
@@ -963,10 +1221,10 @@
         </family>
         <family name="PauseButtons" plugin-id="Button" sid="809839493309607">
             <members>
-                <member>Menu</member>
-                <member>Opçoes</member>
-                <member>QuitP</member>
-                <member>Resume</member>
+                <member>aaResume</member>
+                <member>abOpçoes</member>
+                <member>acMenu</member>
+                <member>adQuitP</member>
             </members>
             <instance-variables>
                 <instance-variable name="Selected" sid="435158517705327" type="number" />
@@ -985,6 +1243,7 @@
         <event-sheet>SoundManager.xml</event-sheet>
         <event-sheet>eOpcoes.xml</event-sheet>
         <event-sheet>ePlayer.xml</event-sheet>
+        <event-sheet>eEnemy0.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />

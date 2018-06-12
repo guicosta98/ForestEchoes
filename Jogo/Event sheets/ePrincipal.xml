@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ePrincipal</name>
     <events>
+        <include>eEnemy0</include>
         <include>ePersonagem</include>
-        <include>eMainMenu</include>
         <include>SoundManager</include>
         <variable constant="0" name="Pause" sid="952674947532333" static="0" type="number">1</variable>
         <event-block sid="405473118538534">
@@ -37,10 +37,7 @@
                 <action id="1" name="Set visible" sid="166024743368317" type="EffectVolOp">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="725181052898950" type="Sprite6">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="757927657075549" type="VoltarOp">
+                <action id="-15" name="Set visible" sid="757927657075549" type="FullScreenOp">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="2" name="Set visible" sid="827013388519022" type="FSOP">
@@ -80,6 +77,9 @@
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;Music&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="927730114952249" type="Sprite6">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
             <sub-events>
@@ -175,9 +175,6 @@
                 <action id="-6" name="Scroll to Y" sid="645127021400279" type="System">
                     <param id="0" name="Y">NegrinhoSprite.Y</param>
                 </action>
-                <action id="0" name="Set text" sid="696308924660819" type="VoltarOp">
-                    <param id="0" name="Text">Sprite6.Selected</param>
-                </action>
                 <action id="-9" name="Set value" sid="157667545937251" type="System">
                     <param id="0" name="Variable">EffectVolume</param>
                     <param id="1" name="Value">EffectVolOp.Value</param>
@@ -209,13 +206,16 @@
                         <action id="1" name="Set visible" sid="204678851318483" type="EffectVolOp">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="279533000254892" type="VoltarOp">
+                        <action id="-15" name="Set visible" sid="279533000254892" type="FullScreenOp">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="2" name="Set visible" sid="629919455885213" type="FSOP">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="3" name="Set visible" sid="310788720703898" type="TextBox">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="578472651122929" type="Sprite6">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
@@ -226,29 +226,21 @@
                                     <param id="0" name="Object">PauseButtons</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="458748656848605">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="484642345106058" type="System">
-                                            <param id="0" name="Variable">Pause</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="2" name="Set visible" sid="476586950192726" type="PauseButtons">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="2" name="Set visible" sid="476586950192726" type="PauseButtons">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="567954026176527">
                     <conditions>
-                        <condition id="-22" name="Else" sid="592141024914882" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="329012272482394" type="Sprite">
+                            <param id="0" name="Instance variable">Options</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-15" name="Set visible" sid="537109327747932" type="EffectVOp">
@@ -263,16 +255,16 @@
                         <action id="1" name="Set visible" sid="994259317701119" type="EffectVolOp">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="353887994443240" type="Sprite6">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="876205175193415" type="VoltarOp">
+                        <action id="-15" name="Set visible" sid="876205175193415" type="FullScreenOp">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="2" name="Set visible" sid="723445962877233" type="FSOP">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="3" name="Set visible" sid="509179312962655" type="TextBox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="688316295865104" type="Sprite6">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -322,345 +314,379 @@
                     <sub-events>
                         <event-group description="" sid="519616480038476" title="CSS Buttons">
                             <sub-events>
-                                <event-block sid="498606032859820">
+                                <event-block sid="613946553544201">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="919583227688229" type="PauseButtons">
-                                            <param id="0" name="Instance variable">Selected</param>
+                                        <condition id="-7" name="Compare instance variable" sid="659914756857175" type="Sprite">
+                                            <param id="0" name="Instance variable">Options</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="5" name="Set CSS style" sid="218540778497967" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;none&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="285262588315143" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;font-size&quot;</param>
-                                            <param id="1" name="Value">&quot;36&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="913410668784377" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;background-color&quot;</param>
-                                            <param id="1" name="Value">&quot;white&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="259532675435149" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="798908488109172" type="Resume">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;solid&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="264344968042220" type="Resume">
-                                            <param id="0" name="Property name">&quot;border-color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="789494774053476" type="Resume">
-                                            <param id="0" name="Property name">&quot;background-color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="876858652747478" type="Resume">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;white&quot;</param>
+                                        <action id="-7" name="Set size" sid="809612497555905" type="Sprite">
+                                            <param id="0" name="Width">250</param>
+                                            <param id="1" name="Height">250</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block sid="556348110917920">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="815106709965676" type="PauseButtons">
-                                            <param id="0" name="Instance variable">Selected</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="5" name="Set CSS style" sid="690554827719045" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;none&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="471042548125477" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;font-size&quot;</param>
-                                            <param id="1" name="Value">&quot;36&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="511210081482186" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;background-color&quot;</param>
-                                            <param id="1" name="Value">&quot;white&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="852521333782161" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="299403177193528" type="Opçoes">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;solid&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="672440181001145" type="Opçoes">
-                                            <param id="0" name="Property name">&quot;border-color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="897619910015961" type="Opçoes">
-                                            <param id="0" name="Property name">&quot;background-color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="851929251333620" type="Opçoes">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;white&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="407221376361572">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="629295787571309" type="PauseButtons">
-                                            <param id="0" name="Instance variable">Selected</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="5" name="Set CSS style" sid="507786558309926" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;none&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="650435016628282" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;font-size&quot;</param>
-                                            <param id="1" name="Value">&quot;36&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="774619420909491" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;background-color&quot;</param>
-                                            <param id="1" name="Value">&quot;white&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="583344990159560" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="101799841240425" type="Menu">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;solid&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="964991927960268" type="Menu">
-                                            <param id="0" name="Property name">&quot;border-color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="792740676021175" type="Menu">
-                                            <param id="0" name="Property name">&quot;background-color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="167782564183466" type="Menu">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;white&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="266657025882234">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="736480410706580" type="PauseButtons">
-                                            <param id="0" name="Instance variable">Selected</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="5" name="Set CSS style" sid="397514023483218" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;none&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="472684505797673" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;font-size&quot;</param>
-                                            <param id="1" name="Value">&quot;36&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="113886451708204" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;background-color&quot;</param>
-                                            <param id="1" name="Value">&quot;white&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="537011582024410" type="PauseButtons">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="911880173833718" type="QuitP">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;solid&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="850593516872616" type="QuitP">
-                                            <param id="0" name="Property name">&quot;border-color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="106381527422420" type="QuitP">
-                                            <param id="0" name="Property name">&quot;background-color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set CSS style" sid="735912465862366" type="QuitP">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;white&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="498606032859820">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="919583227688229" type="PauseButtons">
+                                                    <param id="0" name="Instance variable">Selected</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set CSS style" sid="218540778497967" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="285262588315143" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                                    <param id="1" name="Value">&quot;36&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="913410668784377" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;white&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="259532675435149" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="798908488109172" type="aaResume">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;solid&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="264344968042220" type="aaResume">
+                                                    <param id="0" name="Property name">&quot;border-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="789494774053476" type="aaResume">
+                                                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="876858652747478" type="aaResume">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;white&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="556348110917920">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="815106709965676" type="PauseButtons">
+                                                    <param id="0" name="Instance variable">Selected</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set CSS style" sid="690554827719045" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="471042548125477" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                                    <param id="1" name="Value">&quot;36&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="511210081482186" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;white&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="852521333782161" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="299403177193528" type="abOpçoes">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;solid&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="672440181001145" type="abOpçoes">
+                                                    <param id="0" name="Property name">&quot;border-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="897619910015961" type="abOpçoes">
+                                                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="851929251333620" type="abOpçoes">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;white&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="407221376361572">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="629295787571309" type="PauseButtons">
+                                                    <param id="0" name="Instance variable">Selected</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set CSS style" sid="507786558309926" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="650435016628282" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                                    <param id="1" name="Value">&quot;36&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="774619420909491" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;white&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="583344990159560" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="101799841240425" type="acMenu">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;solid&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="964991927960268" type="acMenu">
+                                                    <param id="0" name="Property name">&quot;border-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="792740676021175" type="acMenu">
+                                                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="167782564183466" type="acMenu">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;white&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="266657025882234">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="736480410706580" type="PauseButtons">
+                                                    <param id="0" name="Instance variable">Selected</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set CSS style" sid="397514023483218" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="472684505797673" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                                                    <param id="1" name="Value">&quot;36&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="113886451708204" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;white&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="537011582024410" type="PauseButtons">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="911880173833718" type="adQuitP">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;solid&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="850593516872616" type="adQuitP">
+                                                    <param id="0" name="Property name">&quot;border-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="106381527422420" type="adQuitP">
+                                                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set CSS style" sid="735912465862366" type="adQuitP">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;white&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
                         <event-group description="" sid="881988471794184" title="Options">
                             <sub-events>
-                                <event-block sid="204887326751434">
+                                <event-block sid="819665051980714">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="127083929565425" type="Sprite6">
-                                            <param id="0" name="Instance variable">Selected</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="7" name="Set CSS style" sid="940911126008028" type="TextBox">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;none&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="755578262942660" type="TextBox">
-                                            <param id="0" name="Property name">&quot;background&quot;</param>
-                                            <param id="1" name="Value">&quot;none&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="395104718076351" type="TextBox">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="390136780766836" type="TextBox">
-                                            <param id="0" name="Property name">&quot;text-align&quot;</param>
-                                            <param id="1" name="Value">&quot;center&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="348970465153867" type="TextBox">
-                                            <param id="0" name="Property name">&quot;font-family&quot;</param>
-                                            <param id="1" name="Value">&quot;arial&quot;</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="446431673686663" type="Sprite6">
-                                            <param id="0" name="X">640</param>
-                                            <param id="1" name="Y">240</param>
-                                        </action>
-                                        <action id="-7" name="Set size" sid="650259861724791" type="Sprite6">
-                                            <param id="0" name="Width">231</param>
-                                            <param id="1" name="Height">71</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="710087746805258" type="Sprite6">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="686937402564218">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="882480503574701" type="Sprite6">
-                                            <param id="0" name="Instance variable">Selected</param>
+                                        <condition id="-7" name="Compare instance variable" sid="225447063795578" type="Sprite">
+                                            <param id="0" name="Instance variable">Options</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="7" name="Set CSS style" sid="854264370855233" type="TextBox">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;none&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="672995498810438" type="TextBox">
-                                            <param id="0" name="Property name">&quot;background&quot;</param>
-                                            <param id="1" name="Value">&quot;none&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="917299748675439" type="TextBox">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="126588457511081" type="TextBox">
-                                            <param id="0" name="Property name">&quot;text-align&quot;</param>
-                                            <param id="1" name="Value">&quot;center&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="766627493722768" type="TextBox">
-                                            <param id="0" name="Property name">&quot;font-family&quot;</param>
-                                            <param id="1" name="Value">&quot;arial&quot;</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="258831661872258" type="Sprite6">
-                                            <param id="0" name="X">640</param>
-                                            <param id="1" name="Y">320</param>
-                                        </action>
-                                        <action id="-7" name="Set size" sid="906430120429402" type="Sprite6">
-                                            <param id="0" name="Width">231</param>
-                                            <param id="1" name="Height">71</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="867519783463708" type="Sprite6">
-                                            <param id="0" name="Visibility">1</param>
+                                        <action id="-7" name="Set size" sid="257462172843177" type="Sprite">
+                                            <param id="0" name="Width">250</param>
+                                            <param id="1" name="Height">300</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block sid="275901916667954">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="340388914525172" type="Sprite6">
-                                            <param id="0" name="Instance variable">Selected</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="7" name="Set CSS style" sid="574046997577130" type="TextBox">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;none&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="926761937323080" type="TextBox">
-                                            <param id="0" name="Property name">&quot;background&quot;</param>
-                                            <param id="1" name="Value">&quot;none&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="631772448110416" type="TextBox">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="959777396829588" type="TextBox">
-                                            <param id="0" name="Property name">&quot;text-align&quot;</param>
-                                            <param id="1" name="Value">&quot;center&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="495192238608686" type="TextBox">
-                                            <param id="0" name="Property name">&quot;font-family&quot;</param>
-                                            <param id="1" name="Value">&quot;arial&quot;</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="709575986531013" type="Sprite6">
-                                            <param id="0" name="X">640</param>
-                                            <param id="1" name="Y">380</param>
-                                        </action>
-                                        <action id="-7" name="Set size" sid="991685600217153" type="Sprite6">
-                                            <param id="0" name="Width">231</param>
-                                            <param id="1" name="Height">30</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="468133435607017" type="Sprite6">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="623583484142718">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="209921567903972" type="Sprite6">
-                                            <param id="0" name="Instance variable">Selected</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="7" name="Set CSS style" sid="449291738683410" type="TextBox">
-                                            <param id="0" name="Property name">&quot;border&quot;</param>
-                                            <param id="1" name="Value">&quot;Solid&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="249490525680804" type="TextBox">
-                                            <param id="0" name="Property name">&quot;border-color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="880884141072964" type="TextBox">
-                                            <param id="0" name="Property name">&quot;background-color&quot;</param>
-                                            <param id="1" name="Value">&quot;white&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="498631679170480" type="TextBox">
-                                            <param id="0" name="Property name">&quot;color&quot;</param>
-                                            <param id="1" name="Value">&quot;black&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="739994053331987" type="TextBox">
-                                            <param id="0" name="Property name">&quot;text-align&quot;</param>
-                                            <param id="1" name="Value">&quot;center&quot;</param>
-                                        </action>
-                                        <action id="7" name="Set CSS style" sid="521325062951632" type="TextBox">
-                                            <param id="0" name="Property name">&quot;font-family&quot;</param>
-                                            <param id="1" name="Value">&quot;arial&quot;</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="536304457367145" type="Sprite6">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="204887326751434">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="127083929565425" type="Sprite6">
+                                                    <param id="0" name="Instance variable">Selected</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set CSS style" sid="940911126008028" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="755578262942660" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;background&quot;</param>
+                                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="395104718076351" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="390136780766836" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;text-align&quot;</param>
+                                                    <param id="1" name="Value">&quot;center&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="348970465153867" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                                                    <param id="1" name="Value">&quot;arial&quot;</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="446431673686663" type="Sprite6">
+                                                    <param id="0" name="X">MusicVOp.x</param>
+                                                    <param id="1" name="Y">MusicVOp.y + 15</param>
+                                                </action>
+                                                <action id="-7" name="Set size" sid="650259861724791" type="Sprite6">
+                                                    <param id="0" name="Width">231</param>
+                                                    <param id="1" name="Height">71</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="710087746805258" type="Sprite6">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="686937402564218">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="882480503574701" type="Sprite6">
+                                                    <param id="0" name="Instance variable">Selected</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set CSS style" sid="854264370855233" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="672995498810438" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;background&quot;</param>
+                                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="917299748675439" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="126588457511081" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;text-align&quot;</param>
+                                                    <param id="1" name="Value">&quot;center&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="766627493722768" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                                                    <param id="1" name="Value">&quot;arial&quot;</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="258831661872258" type="Sprite6">
+                                                    <param id="0" name="X">EffectVOp.x</param>
+                                                    <param id="1" name="Y">EffectVOp.y  +15</param>
+                                                </action>
+                                                <action id="-7" name="Set size" sid="906430120429402" type="Sprite6">
+                                                    <param id="0" name="Width">231</param>
+                                                    <param id="1" name="Height">71</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="867519783463708" type="Sprite6">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="275901916667954">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="340388914525172" type="Sprite6">
+                                                    <param id="0" name="Instance variable">Selected</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set CSS style" sid="574046997577130" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="926761937323080" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;background&quot;</param>
+                                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="631772448110416" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="959777396829588" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;text-align&quot;</param>
+                                                    <param id="1" name="Value">&quot;center&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="495192238608686" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                                                    <param id="1" name="Value">&quot;arial&quot;</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="250317245482259" type="Sprite6">
+                                                    <param id="0" name="X">EffectVOp.x</param>
+                                                    <param id="1" name="Y">FullScreenOp.Y </param>
+                                                </action>
+                                                <action id="-7" name="Set size" sid="991685600217153" type="Sprite6">
+                                                    <param id="0" name="Width">231</param>
+                                                    <param id="1" name="Height">30</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="468133435607017" type="Sprite6">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="623583484142718">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="209921567903972" type="Sprite6">
+                                                    <param id="0" name="Instance variable">Selected</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set CSS style" sid="449291738683410" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                                    <param id="1" name="Value">&quot;Solid&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="249490525680804" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;border-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="880884141072964" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                                                    <param id="1" name="Value">&quot;white&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="498631679170480" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;color&quot;</param>
+                                                    <param id="1" name="Value">&quot;black&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="739994053331987" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;text-align&quot;</param>
+                                                    <param id="1" name="Value">&quot;center&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set CSS style" sid="521325062951632" type="TextBox">
+                                                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                                                    <param id="1" name="Value">&quot;arial&quot;</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="603388120938823" type="Sprite6">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
@@ -745,10 +771,13 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="114696268884768">
+                        <event-block any="1" sid="114696268884768">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="509802825483832" type="Keyboard">
                                     <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="375567055657445" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -827,10 +856,13 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="357286314496398">
+                        <event-block any="1" sid="357286314496398">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="542405777302892" type="Keyboard">
                                     <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="452731494767482" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -909,10 +941,13 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="158883345105029">
+                        <event-block any="1" sid="158883345105029">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="473208781344827" type="Keyboard">
                                     <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="533313577516043" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -981,10 +1016,13 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="593626748010530">
+                        <event-block any="1" sid="593626748010530">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="743337973371550" type="Keyboard">
                                     <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="179031578298094" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -1118,6 +1156,13 @@
                                                 <action id="-10" name="Set value" sid="868180489811623" type="Sprite">
                                                     <param id="0" name="Instance variable">Options</param>
                                                     <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="578945503551010" type="Sprite6">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="211508505618538" type="Sprite">
+                                                    <param id="0" name="Instance variable">Selected</param>
+                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
